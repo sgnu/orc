@@ -39,6 +39,15 @@ function calculateOD(window) {
     return (80 - window) / 6;
 }
 
+function odChange(overallDifficulty, rateChange, reversed) {
+    const window = calculate300Window(overallDifficulty);
+    if (reversed) {
+        return calculateOD(window * rateChange);
+    } else {
+        return calculateOD(window / rateChange);
+    }
+}
+
 function round(number, digits) { // digits after decimal point
     return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits)
 }
