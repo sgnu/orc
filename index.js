@@ -30,3 +30,7 @@ function arChange(approachRate, rateChange, reversed) {
         return calculateAR(approachTime / rateChange);
     }
 }
+
+function round(number, digits) { // digits after decimal point
+    return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits)
+}
