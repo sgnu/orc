@@ -21,3 +21,12 @@ function calculateApproachTime(approachRate) {
         return 1200;
     }
 }
+
+function arChange(approachRate, rateChange, reversed) {
+    const approachTime = calculateApproachTime(approachRate);
+    if (reversed) {
+        return calculateAR(approachTime * rateChange);
+    } else {
+        return calculateAR(approachTime / rateChange);
+    }
+}
